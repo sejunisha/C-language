@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+#define f(x) (pow(2*x3)-pow(x,2)-1)
+
+int main() 
+{
+    float a,b,m,var,R,f;
+    int count=0;
+    // Write C code here
+    printf("\n\t for root of the equation 2x*3-x*2-1 is");
+    do 
+    {
+        printf("\n enter first number :");
+        scanf("%f",var);
+        R=f(var);
+        if(R<0)
+        a=var;
+    }
+    while(R>0);
+    
+    do
+    {
+        printf("enter second number :");
+        scanf("%f", &var);
+        R=f(var);
+        if (R>0)
+        b=var;
+    } 
+     while (R<0);
+     
+     do
+     {
+         printf("\n your root of the eqaution between value %.2f and %.2f is", a, b);
+         m=(a+b)/(2.0);
+         // (f(m)>0) ? (b=m) : ((f)(m)<0) ? (a=m) : printf("root at equation is %f", f(m))
+     }
+
+    return 0;
+}
